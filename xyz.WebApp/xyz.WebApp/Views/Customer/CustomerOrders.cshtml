@@ -1,0 +1,23 @@
+﻿@model CustomerOrdersModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+	<div class="row row-cols-1 row-cols-md-3 g-4">
+		@foreach (var movie in Model.Orders)
+		{
+			<div class="col">
+				<div class="card h-100">
+					<div class="card-body">
+						<h5 class="card-title">@movie.Id</h5>
+						<p class="card-text">@movie.ReferenceNumber</p>
+						<p class="card-text">@movie.AddedDate</p>
+						<p class="card-text">@movie.AddedDate</p>
+					</div>
+				</div>
+			</div>
+		}
+	</div>
+</div>
